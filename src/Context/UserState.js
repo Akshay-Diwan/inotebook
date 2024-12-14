@@ -7,9 +7,9 @@ import { useNavigate } from 'react-router-dom';
 const UserState = (props)=>{
     const [invalid, setInvalid] = useState(false);
     const navigate = useNavigate();
-
+    const host = 'https://inotebook-backend-jthn.onrender.com';
     const getUserId = async ()=>{
-        const response = await fetch('http://localhost:5000/api/auth/getUser',{
+        const response = await fetch(`${host}/api/auth/getUser`,{
             method: 'POST',
             headers:{
                 "auth-token": `${localStorage.getItem('token')}`
@@ -23,7 +23,7 @@ const UserState = (props)=>{
             email: email,
             password: password
         }
-        const response = await fetch('http://localhost:5000/api/auth/login',
+        const response = await fetch(`${host}/api/auth/login`,
             {
                 method: 'POST',
                 headers:{
@@ -62,7 +62,7 @@ const UserState = (props)=>{
             email: email,
             password: password 
         }
-        const response = await fetch('http://localhost:5000/api/auth/createUser',
+        const response = await fetch(`${host}/api/auth/createUser`,
             {
                 method: 'POST',
                 headers:{
