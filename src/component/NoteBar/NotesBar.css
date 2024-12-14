@@ -1,0 +1,19 @@
+.list-group{
+    width: 20vw;
+    height: 100vh;
+    background-color: rgba(196, 196, 196, 0.097);
+    overflow-y:scroll;
+    
+}
+h4{
+  background-color: white; 
+  margin: 0;
+  padding-block:0.5rem ;
+  border:rgb(196 196 196 / 35%) 1px solid ;
+}
+::-webkit-scrollbar{
+  background: black;
+}
+::-webkit-scrollbar-thumb{
+  background-color: grey;
+}

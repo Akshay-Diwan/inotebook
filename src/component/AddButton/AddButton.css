@@ -1,0 +1,15 @@
+.addbutton{
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    height: 2cm;
+    width: 2cm;
+    border-radius: 50%;
+    border: 0px;
+    box-shadow: 1px 3px  4px black;
+
+    background: url('/public/addbutton.png');
+    background-position: center;
+    background-size: 110%;
+    padding: 0px;
+}

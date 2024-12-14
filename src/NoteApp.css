@@ -1,0 +1,16 @@
+.NoteAppContainer{
+    display: flex;
+    
+}
+.notecontainer{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 5% 95%;
+  }
+  .addContents{
+    position: absolute;
+    right: 30%;
+    top: 50%;
+    z-index: -1;
+    /* align-content: center; */
+  }
