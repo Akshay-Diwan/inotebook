@@ -3,7 +3,7 @@ import NoteContext from "./noteContext";
 import { useParams } from "react-router-dom";
 
 const NoteState = (props)=>{
-    const host = "http://localhost:5000";
+    const host = "https://inotebook-backend-jthn.onrender.com";
     const [notes,setNotes] = useState([]);
     const [content, setContent] = useState({title: '', description: '', id: ''});
     const [edit, setEdit] =useState(false);
@@ -37,7 +37,7 @@ const addNote = async (userId)=> {
         tag: "General",
         UserId: userId
     }
-    const response = await fetch("http://localhost:5000/api/notes/createnote",{
+    const response = await fetch(`${host}/api/notes/createnote`,{
         method: 'POST',
         headers:{
             "Content-Type": "application/json",
@@ -56,7 +56,7 @@ const addNote = async (userId)=> {
     
 }
 const updateNote = async (data, id)=>{
-    const response = await fetch(`http://localhost:5000/api/notes/updatenote/${id}`,{
+    const response = await fetch(`${host}/api/notes/updatenote/${id}`,{
         method: 'PUT',
         headers: {
             "Content-Type" : "application/json",
@@ -72,7 +72,7 @@ const updateNote = async (data, id)=>{
     console.log(json);
 }
 const deleteNote = async (id)=>{
-    const response = await fetch(`http://localhost:5000/api/notes/deletenote/${id}`,{
+    const response = await fetch(`${host}/api/notes/deletenote/${id}`,{
         method: 'DELETE',
         headers: {
             "Content-Type" : "application/json",
@@ -89,7 +89,7 @@ const deleteNote = async (id)=>{
 }
 const openNote = async (id)=>{
     try{
-    const response = await fetch('http://localhost:5000/api/notes//fetchonenote',{
+    const response = await fetch(`${host}/api/notes//fetchonenote`,{
         method: 'GET',
         headers: {
             "Content-Type" : "application/json",
